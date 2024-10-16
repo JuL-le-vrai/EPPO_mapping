@@ -10,25 +10,23 @@ import argparse
 import json
 
 
+def list_of_strings(arg):
+    return arg.split(',')
 
 if __name__ == '__main__':
     
     
     parser = argparse.ArgumentParser()
     parser.add_argument('--name', type = str, default='')
+    parser.add_argument('--ds-list', type = list_of_strings)
     args = parser.parse_args()
 
 
     dic_possible_names = {}
 
-    with open('../data/Extract_EPPO/Harmonization_outputs/DS_names/Bousset_names.json','r') as f:
-        dic_possible_names['Bousset'] = json.load(f)
-    with open('../data/Extract_EPPO/Harmonization_outputs/DS_names/PV_names.json','r') as f:
-        dic_possible_names['PV'] = json.load(f)
-    with open('../data/Extract_EPPO/Harmonization_outputs/DS_names/PN_names.json','r') as f:
-        dic_possible_names['PN'] = json.load(f)
-    with open('../data/Extract_EPPO/Harmonization_outputs/DS_names/IPM_names.json','r') as f:
-        dic_possible_names['IPM'] = json.load(f)
+    for ds in args.ds_list:
+        with open(f'../data/Extract_EPPO/Harmonization_outputs/DS_names/{ds}_names.json','r') as f:
+            dic_possible_names[ds] = json.load(f)
 
 
     with open('../data/Extract_EPPO/fullcodes.xml','r') as f:
@@ -82,13 +80,14 @@ if __name__ == '__main__':
 
     Path(f'../data/Extract_EPPO/GPT_features{name_exp}').mkdir(exist_ok=True)
 
-    with open('../data/Extract_EPPO/Hierarchy.json','r') as f:
-        hierarchy = json.load(f)
+    if args.name == 'hierarchic':
+        with open('../data/Extract_EPPO/Hierarchy.json','r') as f:
+            hierarchy = json.load(f)
 
 
     for ds in tqdm(dic_possible_names):
         Path(f'../data/Extract_EPPO/GPT_features{name_exp}/{ds}').mkdir(exist_ok=True)
-        for subid in tqdm(dic_possible_names[ds]):
+        for subid in dic_possible_names[ds]:
             Path(f'../data/Extract_EPPO/GPT_features{name_exp}/{ds}/{subid}').mkdir(exist_ok=True)
 
             for name in dic_possible_names[ds][subid]:
