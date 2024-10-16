@@ -100,7 +100,7 @@ if __name__ == '__main__':
                             for name2 in dic_possible_names[ds][subid]:
                                 # standardizing the names with the same standard
                                 standard_name2 = name2.lower()
-                                standard_name2 = ''.join(x for x in standard_name2.title() if x.isalum())
+                                standard_name2 = ''.join(x for x in standard_name2.title() if x.isalnum())
                                 # Computing the edition distance
                                 ratio = rapidfuzz.fuzz.ratio(standard_name1, standard_name2, score_cutoff=100*tolerance)/100
                                 if ratio >= tolerance:
@@ -171,7 +171,7 @@ if __name__ == '__main__':
 
         final_mapping = {}
         for ds in args.ds_list:
-            final_mapping[ds] = {subid : set() for subid in dic_possible_names[ds]}
+            final_mapping[ds] = {subid : [] for subid in dic_possible_names[ds]}
             for code in dict_codes:
                 if dict_codes[code]['mapsto'][ds] != []:
                     if len(dict_codes[code]['mapsto'][ds]) > 0:
@@ -203,7 +203,7 @@ if __name__ == '__main__':
 
 
     with open(f'../data/Extract_EPPO/Harmonization_outputs/Mapping_{args.method}_{tolerance}_{args.drctn}_V2.json', 'w') as f:
-        json.dump(mapping, f, indent=2)
+        json.dump(final_mapping, f, indent=2)
 
 
 
