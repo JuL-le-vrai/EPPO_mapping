@@ -71,7 +71,7 @@ if __name__ == '__main__':
                     if n['lang'] in considered_languages_for_mapping:
                         indiv_names.append({'full_name' : n['fullname'], 'lang' : n['lang'], 'active' : n['@isactive']})
 
-            dict_codes[indiv_code] = {'type' : indiv_type, 'parents' : indiv_parents, 'names' : indiv_names, 'mapsto' : {'IPM' : set(), 'PN' : set(), 'Bousset' : set(), 'Avelino' : set(), 'PV' : set()}}
+            dict_codes[indiv_code] = {'type' : indiv_type, 'parents' : indiv_parents, 'names' : indiv_names, 'mapsto' : { ds : set() for ds in args.ds_list}}
 
     dic_possible_names = { ds : {} for ds in args.ds_list}
 
