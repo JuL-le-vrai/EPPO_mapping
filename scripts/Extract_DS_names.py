@@ -107,3 +107,22 @@ for patho in subjects_PV:
 
 with open(f'../data/Extract_EPPO/Harmonization_outputs/DS_names/PV_names.json', 'w') as f:
     json.dump(dic_possible_names_PV, f, indent = 2)
+
+
+
+#### Extracting CDDM possible names
+
+BD_CDDM = pd.read_csv('../data/CDDM_data/BD_CDDM.csv', sep = ';')
+BD_CDDM['subid'] = BD_CDDM['crop'] + ' ' + BD_CDDM['code']
+subjects_CDDM = list(BD_CDDM['subid'].unique())
+dic_possible_names_CDDM = {}
+
+for k in subjects_CDDM:
+    df_sub = BD_CDDM[BD_CDDM['subid'] == k]
+    dic_possible_names_CDDM[k] = set()
+    # dic_possible_names_bousset2[k] = dic_possible_names_bousset[k].union([x for x in list(df_sub['cause'].unique()) if not str(x) == 'nan'])
+    dic_possible_names_CDDM[k].add(k)
+    dic_possible_names_CDDM[k] = [i.lower().strip(' _').replace(' ','_').replace('.','') for i in dic_possible_names_CDDM[k]]
+
+with open(f'../data/Extract_EPPO/Harmonization_outputs/DS_names/CDDM_names.json', 'w') as f:
+    json.dump(dic_possible_names_CDDM, f, indent = 2)
