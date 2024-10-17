@@ -85,9 +85,9 @@ if __name__ == '__main__':
             hierarchy = json.load(f)
 
 
-    for ds in tqdm(dic_possible_names):
+    for ds in dic_possible_names:
         Path(f'../data/Extract_EPPO/GPT_features{name_exp}/{ds}').mkdir(exist_ok=True)
-        for subid in dic_possible_names[ds]:
+        for subid in tqdm(dic_possible_names[ds]):
             Path(f'../data/Extract_EPPO/GPT_features{name_exp}/{ds}/{subid}').mkdir(exist_ok=True)
 
             for name in dic_possible_names[ds][subid]:
