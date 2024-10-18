@@ -1,4 +1,4 @@
 
-data/Extract_EPPO/GPT_features/*
+data/Extract_EPPO/GPT_features*
 data/Extract_EPPO/Harmonization_outputs/*
 *.xml
