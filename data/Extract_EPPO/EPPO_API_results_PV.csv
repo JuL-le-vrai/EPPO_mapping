@@ -3,8 +3,8 @@ Tomato___Late_blight;Late_blight;Tomato Late blight;****NOT FOUND*****;late blig
 Strawberry___Leaf_scorch;Leaf_scorch;Strawberry Leaf scorch;****NOT FOUND*****;leaf scorch of strawberry;leaf scorch of strawberry;DIPCEA;Strawberry___Leaf_scorch
 Corn_(maize)___healthy;healthy;healthy;****NOT FOUND*****;;healthy;****NOT FOUND*****;healthy
 Corn_(maize)___Northern_Leaf_Blight;Northern_Leaf_Blight;Northern Leaf Blight;****NOT FOUND*****;northern corn leaf blight;northern corn leaf blight;SETOTU;Corn_(maize)___Northern_Leaf_Blight
-Squash___Powdery_mildew;Powdery_mildew;Squash Powdery mildew;****NOT FOUND*****;powdery mildew of cucurbits ;powdery mildew of cucurbits ;LEVECU;Squash___Powdery_mildew
-Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot;Cercospora_leaf_spot Gray_leaf_spot;Cercospora leaf spot Gray leaf spot;****NOT FOUND*****;gray leaf spot of maize;gray leaf spot of maize;CERCZN;Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot
+Squash___Powdery_mildew;Powdery_mildew;Squash Powdery mildew;****NOT FOUND*****;powdery mildew of cucurbits ;powdery mildew of cucurbits ;ERYSCI;Squash___Powdery_mildew
+Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot;Cercospora_leaf_spot Gray_leaf_spot;Cercospora leaf spot Gray leaf spot;****NOT FOUND*****;gray leaf spot of maize;gray leaf spot of maize;CERCZM;Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot
 Tomato___Spider_mites Two-spotted_spider_mite;Spider_mites Two-spotted_spider_mite;Spider mites Two-spotted spider mite;****NOT FOUND*****;two-spotted spider mite;two-spotted spider mite;TETRUR;Tomato___Spider_mites Two-spotted_spider_mite
 Corn_(maize)___Common_rust_;Common_rust_;Corn Common rust ;****NOT FOUND*****;common rust of maize;common rust of maize;PUCCSO;Corn_(maize)___Common_rust_
 Tomato___Tomato_Yellow_Leaf_Curl_Virus;Tomato_Yellow_Leaf_Curl_Virus;Tomato Yellow Leaf Curl Virus;TYLCV0;;Tomato Yellow Leaf Curl Virus;TYLCV0;Tomato___Tomato_Yellow_Leaf_Curl_Virus
@@ -16,13 +16,13 @@ Apple___Cedar_apple_rust;Cedar_apple_rust;Cedar apple rust;****NOT FOUND*****;ru
 Pepper,_bell___Bacterial_spot;Bacterial_spot;Pepper bell Bacterial spot;****NOT FOUND*****;bacterial spot of pepper;bacterial spot of pepper;XANTVE;Pepper,_bell___Bacterial_spot
 Grape___Esca_(Black_Measles);Esca_(Black_Measles);Esca (Black Measles);****NOT FOUND*****;esca of grapevine;esca of grapevine;PHMOCH;Grape___Esca_(Black_Measles)
 Apple___Apple_scab;Apple_scab;Apple scab;****NOT FOUND*****;scab of apple;scab of apple;VENTIN;Apple___Apple_scab
-Peach___Bacterial_spot;Bacterial_spot;Peach Bacterial spot;;bacterial leaf spot of stone fruits;bacterial leaf spot of stone fruitsXANTPR;XANTPR;Peach___Bacterial_spot
+Peach___Bacterial_spot;Bacterial_spot;Peach Bacterial spot;;bacterial leaf spot of stone fruits;bacterial leaf spot of stone fruits;XANTPR;Peach___Bacterial_spot
 Orange___Haunglongbing_(Citrus_greening);Haunglongbing_(Citrus_greening);Haunglongbing (Citrus greening);****NOT FOUND*****;greening of citrus;greening of citrus;LIBEAF;Orange___Haunglongbing_(Citrus_greening)
 Apple___Black_rot;Black_rot;Apple Black rot;;black rot of apple;black rot of apple;BOTSOB;Apple___Black_rot
-Tomato___Leaf_Mold;Leaf_Mold;Leaf Mold;****NOT FOUND*****;leaf mould of tomato;leaf mould of tomato;CERCFU;Tomato___Leaf_Mold
-Tomato___Early_blight;Early_blight;Tomato Early blight;;early blight of tomato;early blight of tomato;ALTETP;Tomato___Early_blight
+Tomato___Leaf_Mold;Leaf_Mold;Leaf Mold;****NOT FOUND*****;leaf mould of tomato;leaf mould of tomato;FULVFU;Tomato___Leaf_Mold
+Tomato___Early_blight;Early_blight;Tomato Early blight;;early blight of tomato;early blight of tomato;ALTESO;Tomato___Early_blight
 Grape___Leaf_blight_(Isariopsis_Leaf_Spot);Leaf_blight_(Isariopsis_Leaf_Spot);Leaf blight (Isariopsis Leaf Spot);****NOT FOUND*****;leaf spot of grapevine;leaf spot of grapevine;MYCOPS;Grape___Leaf_blight_(Isariopsis_Leaf_Spot)
 Tomato___Tomato_mosaic_virus;Tomato_mosaic_virus;Tomato mosaic virus;TMV000;;Tomato mosaic virus;TMV000;Tomato___Tomato_mosaic_virus
-Tomato___Septoria_leaf_spot;Septoria_leaf_spot;Septoria leaf spot;SEPTTR;;Septoria leaf spot;SEPTTR;Tomato___Septoria_leaf_spot
-Tomato___Target_Spot;Target_Spot;Target Spot;CYPTCP;;Target Spot;CYPTCP;Tomato___Target_Spot
+Tomato___Septoria_leaf_spot;Septoria_leaf_spot;Septoria leaf spot;SEPTTR;;Septoria leaf spot;SEPTLY;Tomato___Septoria_leaf_spot
+Tomato___Target_Spot;Target_Spot;Target Spot;CYPTCP;;Target Spot;CORYCA;Tomato___Target_Spot
 Tomato___Bacterial_spot;Bacterial_spot;Tomato Bacterial spot;;bacterial spot of tomato;bacterial spot of tomato;XANTPF;Tomato___Bacterial_spot
