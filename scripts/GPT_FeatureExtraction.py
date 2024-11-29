@@ -97,6 +97,24 @@ if __name__ == '__main__':
                         sentence = f'As an expert phytopathologist, with comprehensive knowledge on pests and diseases of plants, and particularly crops, tell me how to differentiate {name} that affect my plant from other similar damages.'
                     elif args.name == "expert_prompt2":
                         sentence = f'As a expert phytopathologist, calculate an embedding of the following plant disease name, avoiding to make a different embedding if two names are very very similar and vary by only 2 or 3 characters : {name}'
+                    elif args.name == "expert_prompt3":
+                        sentence = f'''I am working with a list of plant pathogen and damage names to identify possible synonyms based on their underlying phytopathological features.
+                                    For each name, I need to extract a precise, domain-specific representation that reflects the biological and symptomatic relationships between different pathogens and types of plant damage. 
+                                    Many names may appear distinct but represent similar concepts in terms of plant disease and damage mechanisms.
+                                    I will provide you either French common names, English common names or scientific name
+
+                                    Please provide a detailed embedding for the following plant pathogen or damage name that captures:
+
+                                    The biological cause (bacterial, viral, fungal, parasitic, etc.)
+                                    The specific symptoms or damages caused to the plant (wilting, leaf spots, cankers, etc.)
+                                    The plant species or group commonly affected
+                                    Any common synonym relationships that might exist within the field of phytopathology
+                                    Any common French/English traduction that might exist within the field of phytopathology
+                                    Contextual relevance to common agricultural practices or biological processes
+                                    Possible misspellings of the names
+
+                                    The output embedding should prioritize the underlying scientific relationships rather than surface-level or language-level differences in names. 
+                                    Here is the first name for extraction: {name}'''
                     elif args.name == 'hierarchic':
                         complete_description = f'{name} '
                         appendix = 'X'
