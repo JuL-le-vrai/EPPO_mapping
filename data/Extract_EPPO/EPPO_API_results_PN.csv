@@ -259,7 +259,7 @@ tuta absoluta;GNORAB;;tuta absoluta;GNORAB;;GNORAB;tuta_absoluta
 tylcv;TYLCV0;;tylcv;TYLCV0;;TYLCV0;tylcv
 verticillium dahliae;VERTDA;;verticillium dahliae;VERTDA;;VERTDA;verticillium_dahliae
 verticillium spp;****NOT FOUND*****;verticillium sp.;verticillium sp.;VERTSP;;VERTSP;verticillium_spp
-virus;****NOT FOUND*****;;virus;****NOT FOUND*****;1VIRLD ;1VIRLD ;virus
+virus;****NOT FOUND*****;;virus;****NOT FOUND*****;1VIRLD ;1VIRLD;virus
 vitrescence;****NOT FOUND*****;;vitrescence;****NOT FOUND*****;;****NOT FOUND*****;vitrescence
 wmcsv;WMCSV0;;wmcsv;WMCSV0;;WMCSV0;wmcsv
 wmv;WMV000;;wmv;WMV000;;WMV000;wmv
