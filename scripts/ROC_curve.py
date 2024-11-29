@@ -17,27 +17,39 @@ if __name__ == '__main__':
     parser.add_argument('--SimRounding', type = int, default = False)
     parser.add_argument('--IPM-only', action='store_true', default = False)
     parser.add_argument('--mapping-choice', action= 'store_true', default = False)
+    parser.add_argument('--test-GT', type=list_of_strings, default=['PN','PV','Bousset','IPM'])
     args = parser.parse_args()
 
-    GT_PN = pd.read_csv('../data/Extract_EPPO/EPPO_API_results_PN.csv', sep = ';')
-    GT_PV = pd.read_csv('../data/Extract_EPPO/EPPO_API_results_PV.csv', sep = ';')
-    GT_Bousset = pd.read_csv('../data/Extract_EPPO/EPPO_API_results_Bousset.csv', sep = ';')
-    GT_IPM = pd.read_csv('../data/Extract_EPPO/EPPO_API_results_IPM.csv', sep = ';')
+
+    GT = {}
+    for ds in args.test_GT:
+        GT[ds] = pd.read_csv(f'../data/Extract_EPPO/EPPO_API_results_{ds}.csv', sep = ';')
+
+    # GT_PN = pd.read_csv('../data/Extract_EPPO/EPPO_API_results_PN.csv', sep = ';')
+    # GT_PV = pd.read_csv('../data/Extract_EPPO/EPPO_API_results_PV.csv', sep = ';')
+    # GT_Bousset = pd.read_csv('../data/Extract_EPPO/EPPO_API_results_Bousset.csv', sep = ';')
+    # GT_IPM = pd.read_csv('../data/Extract_EPPO/EPPO_API_results_IPM.csv', sep = ';')
+    # GT_Bousset2 = pd.read_csv('../data/Extract_EPPO/EPPO_API_results_Bousset2.csv', sep = ';')
 
 
-    GT_tot = {'Bousset' : {}, 'PN' : {}, 'PV' : {}, 'IPM' : {}}
 
-    for _, l in GT_PN.iterrows():
-        GT_tot['PN'][l['Name_PN'].replace(' ', '_')] = l['EPPO_final']
 
-    for _, l in GT_Bousset.iterrows():
-        GT_tot['Bousset'][l['organisme']] = l['EPPO_final']
+    # GT_tot = {'Bousset' : {}, 'PN' : {}, 'PV' : {}, 'IPM' : {}, 'Bousset2' : {}}
+    GT_tot = {ds:{} for ds in args.test_GT}
 
-    for _, l in GT_PV.iterrows():
-        GT_tot['PV'][l['iName']] = l['EPPO_final']
+    for ds in GT:
 
-    for _, l in GT_IPM.iterrows():
-        GT_tot['IPM'][str(l['iName'])] = l['EPPO_final']
+        for _, l in GT[ds].iterrows():
+            GT_tot[ds][l['iName']] = l['EPPO_final']
+
+    # for _, l in GT_PV.iterrows():
+    #     GT_tot['PV'][l['iName']] = l['EPPO_final']
+
+    # for _, l in GT_IPM.iterrows():
+    #     GT_tot['IPM'][str(l['iName'])] = l['EPPO_final']
+
+    # for _, l in GT_Bousset2.iterrows():
+    #     GT_tot['Bousset2'][str(l['iName'])] = l['EPPO_final']
 
     tot_tol = []
     tot_name = []
@@ -57,8 +69,16 @@ if __name__ == '__main__':
         with open(mapping_path, 'r') as f:
             Inferred_mapping = json.load(f)
 
-        grain = 0.005
-        tol = 0.75
+
+        if "relative" in mapping_path:
+            tol = 0
+            grain = 0.001
+        # if "Pllama" in mapping_path:
+        #     tol = 0.999
+        #     grain = 0.0001
+        else:
+            tol = 0.75
+            grain = 0.005
 
         list_tol = []
         list_FPR = []
@@ -76,17 +96,49 @@ if __name__ == '__main__':
                     if len(Inferred_mapping[ds][k]) > 0:
                         Inferred_mapping[ds][k][1] = round(Inferred_mapping[ds][k][1], args.SimRounding)
 
+        list_sims = []
+        for ds in Inferred_mapping:
+            for k in Inferred_mapping[ds]:
+                if len(Inferred_mapping[ds][k]) > 0:
+                    list_sims.append(Inferred_mapping[ds][k][1])
 
-        nearly_one = 0.99999
+
+        if "relative" in mapping_path:
+            nearly_one = max(list_sims)
+        # if "Pllama" in mapping_path:
+        #     nearly_one = 0.999999
+        else:
+            nearly_one = 0.99999
+        
 
         while tol <= nearly_one:
 
-            V_positif = {'Bousset' : 0, 'PN' : 0, 'PV' : 0, 'IPM' : 0}
-            F_positif = {'Bousset' : 0, 'PN' : 0, 'PV' : 0, 'IPM' : 0}
-            F_negatif = {'Bousset' : 0, 'PN' : 0, 'PV' : 0, 'IPM' : 0}
-            V_negatif = {'Bousset' : 0, 'PN' : 0, 'PV' : 0, 'IPM' : 0}
-            total_mapped = {'Bousset' : 0, 'PN' : 0, 'PV' : 0, 'IPM' : 0}
-            total_with_GT_mapping = {'Bousset' : 0, 'PN' : 0, 'PV' : 0, 'IPM' : 0}
+            print(tol)
+
+            V_positif = {}
+            F_positif = {}
+            F_negatif = {}
+            V_negatif = {}
+            total_mapped = {}
+            total_with_GT_mapping = {}
+
+            for ds in GT_tot:
+
+
+                V_positif[ds] = 0
+                F_positif[ds] = 0
+                F_negatif[ds] = 0
+                V_negatif[ds] = 0
+                total_mapped[ds] = 0
+                total_with_GT_mapping[ds] = 0
+
+
+            # V_positif = {'Bousset' : 0, 'PN' : 0, 'PV' : 0, 'IPM' : 0}
+            # F_positif = {'Bousset' : 0, 'PN' : 0, 'PV' : 0, 'IPM' : 0}
+            # F_negatif = {'Bousset' : 0, 'PN' : 0, 'PV' : 0, 'IPM' : 0}
+            # V_negatif = {'Bousset' : 0, 'PN' : 0, 'PV' : 0, 'IPM' : 0}
+            # total_mapped = {'Bousset' : 0, 'PN' : 0, 'PV' : 0, 'IPM' : 0}
+            # total_with_GT_mapping = {'Bousset' : 0, 'PN' : 0, 'PV' : 0, 'IPM' : 0}
 
 
             F_positif_list = []
@@ -193,7 +245,12 @@ if __name__ == '__main__':
 
 
             tol += grain
-            tol = round(tol,3)
+            if "relative" in mapping_path:
+                tol = round(tol,5)
+            # if "Pllama" in mapping_path:
+            #     tol = round(tol,7)
+            else:
+                tol = round(tol,3)
 
             if tol == 1:
                 tol = nearly_one
@@ -257,7 +314,7 @@ if __name__ == '__main__':
         axes[0].grid(True)
 
         for i, (precision, recall) in enumerate(zip(tot_Precision, tot_Recall)):
-            axes[1].plot(recall, precision, marker='o', linestyle='-', label=f'Precision-Recall {tot_name[i].replace(f"_{tot_name[i].split('_')[-1]}", "").replace("EPPO_mapping_", "")}')
+            axes[1].plot(recall, precision, marker='o', linestyle='-', label=tot_name[i].replace(f"_{tot_name[i].split('_')[-1]}", "").replace("EPPO_mapping_", "").replace('_0.75_EPPOtoDS', ''))
 
         # Add axis labels and title
         axes[1].set_xlabel('Recall')
@@ -279,5 +336,76 @@ if __name__ == '__main__':
         # Show the plot
         plt.show()
 
+        fig, axes = plt.subplots(nrows=2, ncols=1, figsize=(8, 10), sharex=False)
+
+        # Plot Precision curves
+        for i, (precision, real_recall) in enumerate(zip(tot_Precision, tot_img_IPM_map)):
+            label = tot_name[i].replace(f"_{tot_name[i].split('_')[-1]}", "").replace("EPPO_mapping_", "").replace('_0.75_EPPOtoDS', '')
+            axes[0].plot(real_recall, precision, marker='x', label=f'Precision {label}')
+
+        axes[0].set_ylabel('Precision')
+        axes[0].set_title('Precision against Images mapped from IPM')
+        axes[0].legend(loc='best')
+        axes[0].grid(True)
+
+        # Plot F1 curves and highlight the top 3 maximum points
+        for i, (F1, real_recall, tol) in enumerate(zip(tot_F1, tot_img_IPM_map, tot_tol)):
+            label = tot_name[i].replace(f"_{tot_name[i].split('_')[-1]}", "").replace("EPPO_mapping_", "").replace('_0.75_EPPOtoDS', '')
+            
+            # Plot the F1 curve
+            axes[1].plot(tol, F1, linestyle='-', label=f'F1 score {label}', linewidth=3.0)
+            
+            # # Find the indices of the top 3 F1 scores
+            # top_3_indices = np.argsort(F1)[-3:][::-1]  # Sort to get top 3 indices, in descending order
+            # top_3_indices = [np.argmax(F1)]
+            
+            # # Plot the top 3 F1 points in red
+            # for j,idx in enumerate(top_3_indices):
+            #     max_tol = tol[idx]
+            #     max_F1 = F1[idx]
+            #     max_recall = real_recall[idx]
+            #     axes[1].plot(max_tol, max_F1, 'ro')  # Red 'o' marker for max F1 score
+            #     # Offset for annotation to prevent overlap
+            #     xytext_offset = (0,0 - 10*j)  # Adjust the vertical offset
+            #     axes[1].annotate(f'Tol : {max_tol}, F1 : {max_F1:4f}', xy=(max_tol, max_F1), xytext=xytext_offset,
+            #                     textcoords='offset points', ha='center', color='black')
+            #     # Add vertical lines at max F1 points across both subplots
+            #     axes[0].axvline(x=max_tol, color='red', linestyle='--')
+            #     axes[1].axvline(x=max_tol, color='red', linestyle='--')
+
+            idx_best_F1 = np.argmax(F1)
+
+
+            with open('./output/mapping_metrics/Mapping_choice_summary.txt', 'w') as f:
+                f.write(f'\nFor mapping : {args.list_mappings[i]}\n')
+
+                f.write(f'Mapping with best F1 : Tolerance = {tol[idx_best_F1]}, Precision = {precision[idx_best_F1]}, Recall = {recall[idx_best_F1]}')
+                with open(mapping_path, 'r') as f2:
+                    Inferred_mapping = json.load(f2)
+                for ds in Inferred_mapping:
+                    for k in Inferred_mapping[ds]:
+                        if len(Inferred_mapping[ds][k]) > 0:
+                            # print(Inferred_mapping[ds][k])
+                            if Inferred_mapping[ds][k][1] < tol[idx_best_F1]:
+                                Inferred_mapping[ds][k] = []
+                with open('./output/mapping_metrics/'+ mapping_path.split('/')[-1].replace('.json', '') + '_WithBestF1.json', 'w') as f3:
+                    json.dump(Inferred_mapping, f3, indent=2)
+
+
+
+        axes[1].set_xlabel('Threshold')
+        axes[1].set_ylabel('F1')
+        axes[1].set_title('F1 against threshold value')
+        axes[1].legend(loc='lower left')
+        axes[1].grid(True)
+
+        # Adjust layout to prevent overlap
+        plt.tight_layout()
+
+        # Save the figure to a file
+        plt.savefig('./output/mapping_metrics/Mapping_choice_curves.png', dpi=300)
+
+        # Show the plot
+        plt.show()
 
 
