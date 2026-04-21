@@ -1,0 +1,8 @@
+torch
+xmltodict
+rapidfuzz
+pandas
+tqdm
+transformers
+numpy
+openai

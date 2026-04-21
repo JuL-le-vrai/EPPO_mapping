@@ -1,0 +1,818 @@
+{
+  "acari_spp": [
+    "acari_sp"
+  ],
+  "accident_climatique": [
+    "accident_climatique"
+  ],
+  "acrolepiopsis_assectella": [
+    "acrolepiopsis_assectella"
+  ],
+  "aculops_lycopersici": [
+    "aculops_lycopersici"
+  ],
+  "adventice": [
+    "adventice"
+  ],
+  "agrobacterium_tumefasciens": [
+    "agrobacterium_tumefasciens"
+  ],
+  "agrotis_sp": [
+    "agrotis_sp"
+  ],
+  "albugo_candida": [
+    "albugo_candida"
+  ],
+  "alternaria_alternata": [
+    "alternaria_alternata"
+  ],
+  "alternaria_cichorii": [
+    "alternaria_cichorii"
+  ],
+  "alternaria_dauci": [
+    "alternaria_dauci"
+  ],
+  "alternaria_linariae": [
+    "alternaria_linariae"
+  ],
+  "alternaria_porri": [
+    "alternaria_porri"
+  ],
+  "alternaria_radicina": [
+    "alternaria_radicina"
+  ],
+  "alternaria_spp": [
+    "alternaria_sp"
+  ],
+  "amv": [
+    "amv"
+  ],
+  "anomalie_genetique": [
+    "anomalie_genetique"
+  ],
+  "aphelenchoides_fragariae": [
+    "aphelenchoides_fragariae"
+  ],
+  "aphelenchoides_ritzemabosi": [
+    "aphelenchoides_ritzemabosi"
+  ],
+  "aphis_spp": [
+    "aphis_sp"
+  ],
+  "argyrotaenia_ljungiana": [
+    "argyrotaenia_ljungiana"
+  ],
+  "armillaria_mellea": [
+    "armillaria_mellea"
+  ],
+  "aschochyta_spp": [
+    "aschochyta_sp"
+  ],
+  "aspergillus_spp": [
+    "aspergillus_sp"
+  ],
+  "asphyxie_racinaire": [
+    "asphyxie_racinaire"
+  ],
+  "athelia_rolfsii": [
+    "athelia_rolfsii"
+  ],
+  "aureobasidium_pullulans": [
+    "aureobasidium_pullulans"
+  ],
+  "bemisia_tabaci": [
+    "bemisia_tabaci"
+  ],
+  "boeremia_exigua_var_exigua": [
+    "boeremia_exigua_var_exigua"
+  ],
+  "botryosporium_spp": [
+    "botryosporium_sp"
+  ],
+  "botrytis_cinerea": [
+    "botrytis_cinerea"
+  ],
+  "botrytis_spp": [
+    "botrytis_sp"
+  ],
+  "botrytis_squamosa": [
+    "botrytis_squamosa"
+  ],
+  "bremia_lactucae": [
+    "bremia_lactucae"
+  ],
+  "brulure_solaire": [
+    "brulure_solaire"
+  ],
+  "bwyv": [
+    "bwyv"
+  ],
+  "byctiscus_betulae": [
+    "byctiscus_betulae"
+  ],
+  "cabyv": [
+    "cabyv"
+  ],
+  "calepitrimerus_vitis": [
+    "calepitrimerus_vitis"
+  ],
+  "candidatus_phytoplasma_solani": [
+    "candidatus_phytoplasma_solani"
+  ],
+  "candidatus_phytoplasma_spp": [
+    "candidatus_phytoplasma_sp"
+  ],
+  "carence": [
+    "carence"
+  ],
+  "cat_face": [
+    "cat_face"
+  ],
+  "cemv": [
+    "cemv"
+  ],
+  "cercospora_beticola": [
+    "cercospora_beticola"
+  ],
+  "cercospora_carotae": [
+    "cercospora_carotae"
+  ],
+  "cercospora_longissima": [
+    "cercospora_longissima"
+  ],
+  "cercospora_nicotianae": [
+    "cercospora_nicotianae"
+  ],
+  "cercospora_spp": [
+    "cercospora_sp"
+  ],
+  "cgmmv": [
+    "cgmmv"
+  ],
+  "chimere": [
+    "chimere"
+  ],
+  "choanephora_cucurbitacearum": [
+    "choanephora_cucurbitacearum"
+  ],
+  "choanephora_cucurbitarum": [
+    "choanephora_cucurbitarum"
+  ],
+  "cladosporium_cucumerinum": [
+    "cladosporium_cucumerinum"
+  ],
+  "cladosporium_herbarum": [
+    "cladosporium_herbarum"
+  ],
+  "cladosporium_sp": [
+    "cladosporium_sp"
+  ],
+  "cladosporium_spp": [
+    "cladosporium_sp"
+  ],
+  "cladosporium_variabile": [
+    "cladosporium_variabile"
+  ],
+  "clavibacter_michiganensis": [
+    "clavibacter_michiganensis"
+  ],
+  "cmv": [
+    "cmv"
+  ],
+  "coccoidea_spp": [
+    "coccoidea_sp"
+  ],
+  "collet_jaune": [
+    "collet_jaune"
+  ],
+  "colletotrichum_acutatum": [
+    "colletotrichum_acutatum"
+  ],
+  "colletotrichum_coccodes": [
+    "colletotrichum_coccodes"
+  ],
+  "colletotrichum_dematium_f_spinaciae": [
+    "colletotrichum_dematium_f_spinaciae"
+  ],
+  "colletotrichum_orbiculare": [
+    "colletotrichum_orbiculare"
+  ],
+  "colletotrichum_spp": [
+    "colletotrichum_sp"
+  ],
+  "colomerus_vitis": [
+    "colomerus_vitis"
+  ],
+  "coniella_diplodiella": [
+    "coniella_diplodiella"
+  ],
+  "corynespora_cassiicola": [
+    "corynespora_cassiicola"
+  ],
+  "coulure": [
+    "coulure"
+  ],
+  "cuscute_sp": [
+    "cuscute_sp"
+  ],
+  "cvyv": [
+    "cvyv"
+  ],
+  "cylindrocarpon_destructans": [
+    "cylindrocarpon_destructans"
+  ],
+  "cysdv": [
+    "cysdv"
+  ],
+  "daktulosphaira_vitifoliae": [
+    "daktulosphaira_vitifoliae"
+  ],
+  "defaut_nouaison": [
+    "defaut_nouaison"
+  ],
+  "deperissement": [
+    "deperissement"
+  ],
+  "didymela_bryoniae": [
+    "didymela_bryoniae"
+  ],
+  "didymella_bryoniae": [
+    "didymella_bryoniae"
+  ],
+  "didymella_lycopersici": [
+    "didymella_lycopersici"
+  ],
+  "ditylenchus_dipsaci": [
+    "ditylenchus_dipsaci"
+  ],
+  "drosophila_spp": [
+    "drosophila_sp"
+  ],
+  "eclatement": [
+    "eclatement"
+  ],
+  "eclatement_du_fruit": [
+    "eclatement_du_fruit"
+  ],
+  "elsinoe_ampelina": [
+    "elsinoe_ampelina"
+  ],
+  "emdv": [
+    "emdv"
+  ],
+  "empoasca_vitis": [
+    "empoasca_vitis"
+  ],
+  "enroulement": [
+    "enroulement"
+  ],
+  "eotetranychus_carpini": [
+    "eotetranychus_carpini"
+  ],
+  "epicocum_spp": [
+    "epicocum_sp"
+  ],
+  "epilachna_argus": [
+    "epilachna_argus"
+  ],
+  "erwinia_tracheiphila": [
+    "erwinia_tracheiphila"
+  ],
+  "erysiphe_heracle": [
+    "erysiphe_heracle"
+  ],
+  "erysiphe_necator": [
+    "erysiphe_necator"
+  ],
+  "erysiphe_polygoni": [
+    "erysiphe_polygoni"
+  ],
+  "esca": [
+    "esca"
+  ],
+  "escargot": [
+    "escargot"
+  ],
+  "fasciation": [
+    "fasciation"
+  ],
+  "fente_de_croissance": [
+    "fente_de_croissance"
+  ],
+  "foudre": [
+    "foudre"
+  ],
+  "fourmis": [
+    "fourmis"
+  ],
+  "fruit_mucrone": [
+    "fruit_mucrone"
+  ],
+  "fumagine": [
+    "fumagine"
+  ],
+  "fusarium_culmorum": [
+    "fusarium_culmorum"
+  ],
+  "fusarium_oxysporum_f_sp_lactucae": [
+    "fusarium_oxysporum_f_sp_lactucae"
+  ],
+  "fusarium_oxysporum_f_sp_lycopersici": [
+    "fusarium_oxysporum_f_sp_lycopersici"
+  ],
+  "fusarium_oxysporum_f_sp_melongenae": [
+    "fusarium_oxysporum_f_sp_melongenae"
+  ],
+  "fusarium_oxysporum_f_sp_melonis": [
+    "fusarium_oxysporum_f_sp_melonis"
+  ],
+  "fusarium_oxysporum_f_sp_radicis_cucumerinum": [
+    "fusarium_oxysporum_f_sp_radicis_cucumerinum"
+  ],
+  "fusarium_oxysporum_f_sp_radicis_lycopersici": [
+    "fusarium_oxysporum_f_sp_radicis_lycopersici"
+  ],
+  "fusarium_solani_f_sp_cucurbitae": [
+    "fusarium_solani_f_sp_cucurbitae"
+  ],
+  "fusarium_sp": [
+    "fusarium_sp"
+  ],
+  "fusarium_spp": [
+    "fusarium_sp"
+  ],
+  "gel": [
+    "gel"
+  ],
+  "geotrichum_candidum": [
+    "geotrichum_candidum"
+  ],
+  "germination_interne": [
+    "germination_interne"
+  ],
+  "gflv": [
+    "gflv"
+  ],
+  "gloeosporium_orbiculare": [
+    "gloeosporium_orbiculare"
+  ],
+  "golovinomyceces_cichoracerum": [
+    "golovinomyceces_cichoracerum"
+  ],
+  "golovinomyces_cichoracearum": [
+    "golovinomyces_cichoracearum"
+  ],
+  "golovinomyces_cichoracearum_var_cichoracearum": [
+    "golovinomyces_cichoracearum_var_cichoracearum"
+  ],
+  "grele": [
+    "grele"
+  ],
+  "grillure_physiologique": [
+    "grillure_physiologique"
+  ],
+  "guignardia_bidwellii": [
+    "guignardia_bidwellii"
+  ],
+  "haematonectria_haematococca": [
+    "haematonectria_haematococca"
+  ],
+  "helminthosporium_solani": [
+    "helminthosporium_solani"
+  ],
+  "hemiptera_spp": [
+    "hemiptera_sp"
+  ],
+  "heteroptera_spp": [
+    "heteroptera_sp"
+  ],
+  "intumescence": [
+    "intumescence"
+  ],
+  "lapin": [
+    "lapin"
+  ],
+  "leptinotarsa_decemlineata": [
+    "leptinotarsa_decemlineata"
+  ],
+  "leveillula_taurica": [
+    "leveillula_taurica"
+  ],
+  "limace": [
+    "limace"
+  ],
+  "liriomysa_spp": [
+    "liriomysa_sp"
+  ],
+  "liyv": [
+    "liyv"
+  ],
+  "lobesia_botrana": [
+    "lobesia_botrana"
+  ],
+  "lrna": [
+    "lrna"
+  ],
+  "macrophomina_phaseolina": [
+    "macrophomina_phaseolina"
+  ],
+  "macule_rouille": [
+    "macule_rouille"
+  ],
+  "maladie_du_bois": [
+    "maladie_du_bois"
+  ],
+  "maladie_physiologique": [
+    "maladie_physiologique"
+  ],
+  "marbrure": [
+    "marbrure"
+  ],
+  "marssonina_fragariae": [
+    "marssonina_fragariae"
+  ],
+  "meloidogyne_spp": [
+    "meloidogyne_sp"
+  ],
+  "metcalfa_pruinosa": [
+    "metcalfa_pruinosa"
+  ],
+  "mlbvv": [
+    "mlbvv"
+  ],
+  "mnsv": [
+    "mnsv"
+  ],
+  "monosporascus_cannonballus": [
+    "monosporascus_cannonballus"
+  ],
+  "mouche": [
+    "mouche"
+  ],
+  "mrmv": [
+    "mrmv"
+  ],
+  "necrose_apicale": [
+    "necrose_apicale"
+  ],
+  "necrose_marginale": [
+    "necrose_marginale"
+  ],
+  "nematoda_spp": [
+    "nematoda_sp"
+  ],
+  "nematode": [
+    "nematode"
+  ],
+  "neoceratitis_cyanescens": [
+    "neoceratitis_cyanescens"
+  ],
+  "noctuelle": [
+    "noctuelle"
+  ],
+  "noctuidae_spp": [
+    "noctuidae_sp"
+  ],
+  "oidium_spp": [
+    "oidium_sp"
+  ],
+  "oiseau": [
+    "oiseau"
+  ],
+  "oiseaux": [
+    "oiseaux"
+  ],
+  "olpidium_virulentus": [
+    "olpidium_virulentus"
+  ],
+  "oomycete_divers": [
+    "oomycete_divers"
+  ],
+  "orobanche_spp": [
+    "orobanche_sp"
+  ],
+  "panonychus_ulmi": [
+    "panonychus_ulmi"
+  ],
+  "passalora_fulva": [
+    "passalora_fulva"
+  ],
+  "pectobacterium_carotovorum": [
+    "pectobacterium_carotovorum"
+  ],
+  "pectobacterium_carotovorum_subsp_carotovorum": [
+    "pectobacterium_carotovorum_subsp_carotovorum"
+  ],
+  "pectobacterium_spp": [
+    "pectobacterium_sp"
+  ],
+  "pemphygus_bursarius": [
+    "pemphygus_bursarius"
+  ],
+  "pemv": [
+    "pemv"
+  ],
+  "penicillium_spp": [
+    "penicillium_sp"
+  ],
+  "peronospora_hyoscyami_f_sp_tabacina": [
+    "peronospora_hyoscyami_f_sp_tabacina"
+  ],
+  "peronospora_parasitica": [
+    "peronospora_parasitica"
+  ],
+  "peronospora_pisi": [
+    "peronospora_pisi"
+  ],
+  "pevmv": [
+    "pevmv"
+  ],
+  "phaeoacremonium_aleophilum": [
+    "phaeoacremonium_aleophilum"
+  ],
+  "phaeomoniella_chlamydospora": [
+    "phaeomoniella_chlamydospora"
+  ],
+  "phomopsis_cucurbitace": [
+    "phomopsis_cucurbitace"
+  ],
+  "phomopsis_dauci": [
+    "phomopsis_dauci"
+  ],
+  "phomopsis_sclerotioides": [
+    "phomopsis_sclerotioides"
+  ],
+  "phomopsis_vexans": [
+    "phomopsis_vexans"
+  ],
+  "phomopsis_viticola": [
+    "phomopsis_viticola"
+  ],
+  "phyllotreta_spp": [
+    "phyllotreta_sp"
+  ],
+  "phytophthora_cactorum": [
+    "phytophthora_cactorum"
+  ],
+  "phytophthora_fragariae": [
+    "phytophthora_fragariae"
+  ],
+  "phytophthora_infestans": [
+    "phytophthora_infestans"
+  ],
+  "phytophthora_nicotianae": [
+    "phytophthora_nicotianae"
+  ],
+  "phytophthora_porri": [
+    "phytophthora_porri"
+  ],
+  "phytophthora_spp": [
+    "phytophthora_sp"
+  ],
+  "phytoplasma_spp": [
+    "phytoplasma_sp"
+  ],
+  "phytotoxicite": [
+    "phytotoxicite"
+  ],
+  "phytotoxicite_herbicide": [
+    "phytotoxicite_herbicide"
+  ],
+  "plasmopara_viticola": [
+    "plasmopara_viticola"
+  ],
+  "plectospora_tabacinea": [
+    "plectospora_tabacinea"
+  ],
+  "podosphaera_aphanis": [
+    "podosphaera_aphanis"
+  ],
+  "podosphaera_xanthii": [
+    "podosphaera_xanthii"
+  ],
+  "point_dores": [
+    "point_dores"
+  ],
+  "polyphagotarsonemus_latus": [
+    "polyphagotarsonemus_latus"
+  ],
+  "polyphyllie": [
+    "polyphyllie"
+  ],
+  "pourriture_acide": [
+    "pourriture_acide"
+  ],
+  "prsv": [
+    "prsv"
+  ],
+  "pseudocercospora_fuliginea": [
+    "pseudocercospora_fuliginea"
+  ],
+  "pseudoidium_neolycopersici": [
+    "pseudoidium_neolycopersici"
+  ],
+  "pseudomonas_cichorii": [
+    "pseudomonas_cichorii"
+  ],
+  "pseudomonas_corrugata": [
+    "pseudomonas_corrugata"
+  ],
+  "pseudomonas_marginalis_pv_marginalis": [
+    "pseudomonas_marginalis_pv_marginalis"
+  ],
+  "pseudomonas_spp": [
+    "pseudomonas_sp"
+  ],
+  "pseudomonas_syringae": [
+    "pseudomonas_syringae"
+  ],
+  "pseudomonas_syringae_pv_aptata": [
+    "pseudomonas_syringae_pv_aptata"
+  ],
+  "pseudoperonospora_cubensis": [
+    "pseudoperonospora_cubensis"
+  ],
+  "puccinia_allii": [
+    "puccinia_allii"
+  ],
+  "puccinia_porri": [
+    "puccinia_porri"
+  ],
+  "pvy": [
+    "pvy"
+  ],
+  "pyrenochaeta_lycopersici": [
+    "pyrenochaeta_lycopersici"
+  ],
+  "pyrenochaeta_terrestris": [
+    "pyrenochaeta_terrestris"
+  ],
+  "pythium_spp": [
+    "pythium_sp"
+  ],
+  "racine_aerienne": [
+    "racine_aerienne"
+  ],
+  "ralstonia_solanacearum": [
+    "ralstonia_solanacearum"
+  ],
+  "ramularia_brunnea": [
+    "ramularia_brunnea"
+  ],
+  "rhizobacter_spp": [
+    "rhizobacter_sp"
+  ],
+  "rhizobium_radiobacter": [
+    "rhizobium_radiobacter"
+  ],
+  "rhizoctionia_violacea": [
+    "rhizoctionia_violacea"
+  ],
+  "rhizoctonia_solani": [
+    "rhizoctonia_solani"
+  ],
+  "rhizoctonia_spp": [
+    "rhizoctonia_sp"
+  ],
+  "rhizopus_stolonifer": [
+    "rhizopus_stolonifer"
+  ],
+  "scaphoideus_titanus": [
+    "scaphoideus_titanus"
+  ],
+  "sclerotinia_minor": [
+    "sclerotinia_minor"
+  ],
+  "sclerotinia_sclerotiorum": [
+    "sclerotinia_sclerotiorum"
+  ],
+  "sclerotinia_slerotiorum": [
+    "sclerotinia_slerotiorum"
+  ],
+  "sclerotinia_spp": [
+    "sclerotinia_sp"
+  ],
+  "scolyte": [
+    "scolyte"
+  ],
+  "scutigerella_immaculata": [
+    "scutigerella_immaculata"
+  ],
+  "septoria_apiicola": [
+    "septoria_apiicola"
+  ],
+  "smamv": [
+    "smamv"
+  ],
+  "sqmv": [
+    "sqmv"
+  ],
+  "stemphylium_botryosum": [
+    "stemphylium_botryosum"
+  ],
+  "stemphylium_spp": [
+    "stemphylium_sp"
+  ],
+  "stictocephala_bisonia": [
+    "stictocephala_bisonia"
+  ],
+  "stress_climatique": [
+    "stress_climatique"
+  ],
+  "stress_froid_alimentaire": [
+    "stress_froid_alimentaire"
+  ],
+  "tache_de_latex": [
+    "tache_de_latex"
+  ],
+  "tache_de_rouille": [
+    "tache_de_rouille"
+  ],
+  "tarsoneme": [
+    "tarsoneme"
+  ],
+  "taupin": [
+    "taupin"
+  ],
+  "tcdvd": [
+    "tcdvd"
+  ],
+  "termite": [
+    "termite"
+  ],
+  "tev": [
+    "tev"
+  ],
+  "thanatephorus_cucumeris": [
+    "thanatephorus_cucumeris"
+  ],
+  "thielaviopsis_basicola": [
+    "thielaviopsis_basicola"
+  ],
+  "thysanoptera_spp": [
+    "thysanoptera_sp"
+  ],
+  "tmv": [
+    "tmv"
+  ],
+  "tobrfv": [
+    "tobrfv"
+  ],
+  "tocv": [
+    "tocv"
+  ],
+  "tomv": [
+    "tomv"
+  ],
+  "tordeuse_indeterminee": [
+    "tordeuse_indeterminee"
+  ],
+  "trichothecium_roseum": [
+    "trichothecium_roseum"
+  ],
+  "trsv": [
+    "trsv"
+  ],
+  "tswv": [
+    "tswv"
+  ],
+  "tuta_absoluta": [
+    "tuta_absoluta"
+  ],
+  "tylcv": [
+    "tylcv"
+  ],
+  "verticillium_dahliae": [
+    "verticillium_dahliae"
+  ],
+  "verticillium_spp": [
+    "verticillium_sp"
+  ],
+  "virus": [
+    "virus"
+  ],
+  "vitrescence": [
+    "vitrescence"
+  ],
+  "wmcsv": [
+    "wmcsv"
+  ],
+  "wmv": [
+    "wmv"
+  ],
+  "xanthomonas_fragariae": [
+    "xanthomonas_fragariae"
+  ],
+  "xanthomonas_hortorum": [
+    "xanthomonas_hortorum"
+  ],
+  "zebrure_fruit": [
+    "zebrure_fruit"
+  ],
+  "zippering": [
+    "zippering"
+  ],
+  "zymv": [
+    "zymv"
+  ]
+}

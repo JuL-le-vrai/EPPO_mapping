@@ -4,15 +4,9 @@ import pandas as pd
 import re
 from tqdm import tqdm
 import numpy as np
-from fuzzywuzzy import fuzz
 import argparse
-from transformers import AutoTokenizer
 import torch
 from types import SimpleNamespace
-from transformers import AutoModel, LlamaTokenizer, LlamaForCausalLM
-import glob
-from numpy import dot
-from numpy.linalg import norm
 import rapidfuzz
 
 def list_of_strings(arg):
@@ -36,7 +30,7 @@ if __name__ == '__main__':
                                                                         'Llama3-embed',
                                                                         'Levenshtein'])
     parser.add_argument('--ds-list', type=list_of_strings, default='PN,PV,Bousset,IPM')
-    parser.add_argument('--drctn', type=str, default = 'EPPOtoDS', choices=['EPPOtoDS', 'DStoEPPO'])
+    parser.add_argument('--drctn', type=str, default = 'DStoEPPO', choices=['EPPOtoDS', 'DStoEPPO'])
     args = parser.parse_args()
 
     # Tolerance threshold for similarity - from 0 to 1

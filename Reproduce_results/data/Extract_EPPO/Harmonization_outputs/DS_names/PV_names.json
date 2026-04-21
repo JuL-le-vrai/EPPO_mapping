@@ -1,0 +1,88 @@
+{
+  "Tomato___Late_blight": [
+    "tomato_late_blight"
+  ],
+  "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot": [
+    "corn_cercospora_leaf_spot",
+    "gray_leaf_spot"
+  ],
+  "Corn_(maize)___Northern_Leaf_Blight": [
+    "corn_northern_leaf_blight"
+  ],
+  "healthy": [
+    "healthy"
+  ],
+  "Squash___Powdery_mildew": [
+    "squash_powdery_mildew"
+  ],
+  "Strawberry___Leaf_scorch": [
+    "strawberry_leaf_scorch"
+  ],
+  "Apple___Apple_scab": [
+    "apple_apple_scab"
+  ],
+  "Apple___Black_rot": [
+    "apple_black_rot"
+  ],
+  "Apple___Cedar_apple_rust": [
+    "apple_cedar_apple_rust"
+  ],
+  "Cherry_(including_sour)___Powdery_mildew": [
+    "cherry_powdery_mildew"
+  ],
+  "Corn_(maize)___Common_rust_": [
+    "corn_common_rust"
+  ],
+  "Grape___Black_rot": [
+    "grape_black_rot"
+  ],
+  "Grape___Esca_(Black_Measles)": [
+    "grape_esca",
+    "black_measles"
+  ],
+  "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)": [
+    "grape_leaf_blight",
+    "isariopsis_leaf_spot"
+  ],
+  "Orange___Haunglongbing_(Citrus_greening)": [
+    "citrus_greening",
+    "orange_haunglongbing"
+  ],
+  "Peach___Bacterial_spot": [
+    "peach_bacterial_spot"
+  ],
+  "Pepper,_bell___Bacterial_spot": [
+    "pepper,_bell_bacterial_spot"
+  ],
+  "Potato___Early_blight": [
+    "potato_early_blight"
+  ],
+  "Potato___Late_blight": [
+    "potato_late_blight"
+  ],
+  "Tomato___Bacterial_spot": [
+    "tomato_bacterial_spot"
+  ],
+  "Tomato___Early_blight": [
+    "tomato_early_blight"
+  ],
+  "Tomato___Leaf_Mold": [
+    "tomato_leaf_mold"
+  ],
+  "Tomato___Septoria_leaf_spot": [
+    "tomato_septoria_leaf_spot"
+  ],
+  "Tomato___Spider_mites Two-spotted_spider_mite": [
+    "two-spotted_spider_mite",
+    "tomato_spider_mites"
+  ],
+  "Tomato___Target_Spot": [
+    "tomato_target_spot"
+  ],
+  "Tomato___Tomato_Yellow_Leaf_Curl_Virus": [
+    "tomato_tomato_yellow_leaf_curl_virus"
+  ],
+  "Tomato___Tomato_mosaic_virus": [
+    "tomato_tomato_mosaic_virus"
+  ]
+}

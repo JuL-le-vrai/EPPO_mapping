@@ -1,0 +1,182 @@
+{
+  "Apple Alternaria Blotch": [
+    "apple_alternaria_blotch"
+  ],
+  "Apple Black Rot": [
+    "apple_black_rot"
+  ],
+  "Apple Brown Spot": [
+    "apple_brown_spot"
+  ],
+  "Apple Cedar Apple Rust": [
+    "apple_cedar_apple_rust"
+  ],
+  "Apple Frog Eye Leaf Spot": [
+    "apple_frog_eye_leaf_spot"
+  ],
+  "Apple Grey Spot": [
+    "apple_grey_spot"
+  ],
+  "Apple Healthy": [
+    "apple_healthy"
+  ],
+  "Apple Leaf Rust": [
+    "apple_leaf_rust"
+  ],
+  "Apple Mosaic Virus": [
+    "apple_mosaic_virus"
+  ],
+  "Apple Powdery Mildew": [
+    "apple_powdery_mildew"
+  ],
+  "Apple Scab": [
+    "apple_scab"
+  ],
+  "Bell Pepper Bacterial Spot": [
+    "bell_pepper_bacterial_spot"
+  ],
+  "Bell Pepper Healthy": [
+    "bell_pepper_healthy"
+  ],
+  "Blueberry Healthy": [
+    "blueberry_healthy"
+  ],
+  "Cherry Healthy": [
+    "cherry_healthy"
+  ],
+  "Cherry Powdery Mildew": [
+    "cherry_powdery_mildew"
+  ],
+  "Corn Healthy": [
+    "corn_healthy"
+  ],
+  "Corn Leaf Rust": [
+    "corn_leaf_rust"
+  ],
+  "Corn Leaf Spot": [
+    "corn_leaf_spot"
+  ],
+  "Corn Northern Leaf Blight": [
+    "corn_northern_leaf_blight"
+  ],
+  "Grape Black Rot": [
+    "grape_black_rot"
+  ],
+  "Grape Esca": [
+    "grape_esca"
+  ],
+  "Grape Healthy": [
+    "grape_healthy"
+  ],
+  "Grape Leaf Blight": [
+    "grape_leaf_blight"
+  ],
+  "Orange Citrus Greening": [
+    "orange_citrus_greening"
+  ],
+  "Orange Healthy": [
+    "orange_healthy"
+  ],
+  "Peach Bacterial Spot": [
+    "peach_bacterial_spot"
+  ],
+  "Peach Healthy": [
+    "peach_healthy"
+  ],
+  "Potato Early Blight": [
+    "potato_early_blight"
+  ],
+  "Potato Healthy": [
+    "potato_healthy"
+  ],
+  "Potato Late Blight": [
+    "potato_late_blight"
+  ],
+  "Pumpkin Powdery Mildew": [
+    "pumpkin_powdery_mildew"
+  ],
+  "Raspberry Healthy": [
+    "raspberry_healthy"
+  ],
+  "Rice Bacterial Leaf Blight": [
+    "rice_bacterial_leaf_blight"
+  ],
+  "Rice Blast": [
+    "rice_blast"
+  ],
+  "Rice Brown Spot": [
+    "rice_brown_spot"
+  ],
+  "Rice Leaf Blight": [
+    "rice_leaf_blight"
+  ],
+  "Rice Leaf Smut": [
+    "rice_leaf_smut"
+  ],
+  "Rice Tungro": [
+    "rice_tungro"
+  ],
+  "Soybean Healthy": [
+    "soybean_healthy"
+  ],
+  "Strawberry Healthy": [
+    "strawberry_healthy"
+  ],
+  "Strawberry Leaf Scorch": [
+    "strawberry_leaf_scorch"
+  ],
+  "Tomato Bacterial Spot": [
+    "tomato_bacterial_spot"
+  ],
+  "Tomato Early Blight": [
+    "tomato_early_blight"
+  ],
+  "Tomato Healthy": [
+    "tomato_healthy"
+  ],
+  "Tomato Late Blight": [
+    "tomato_late_blight"
+  ],
+  "Tomato Leaf Mold": [
+    "tomato_leaf_mold"
+  ],
+  "Tomato Mosaic Virus": [
+    "tomato_mosaic_virus"
+  ],
+  "Tomato Powdery Mildew": [
+    "tomato_powdery_mildew"
+  ],
+  "Tomato Septoria Leaf Spot": [
+    "tomato_septoria_leaf_spot"
+  ],
+  "Tomato Spider Mites": [
+    "tomato_spider_mites"
+  ],
+  "Tomato Target Spot": [
+    "tomato_target_spot"
+  ],
+  "Tomato Yellow Leaf Curl Virus": [
+    "tomato_yellow_leaf_curl_virus"
+  ],
+  "Wheat Healthy": [
+    "wheat_healthy"
+  ],
+  "Wheat Leaf Rust": [
+    "wheat_leaf_rust"
+  ],
+  "Wheat Loose Smut": [
+    "wheat_loose_smut"
+  ],
+  "Wheat Root Rot": [
+    "wheat_root_rot"
+  ],
+  "Wheat Septoria Leaf Spot": [
+    "wheat_septoria_leaf_spot"
+  ],
+  "Wheat Stem Rust": [
+    "wheat_stem_rust"
+  ],
+  "Wheat Stripe Rust": [
+    "wheat_stripe_rust"
+  ]
+}

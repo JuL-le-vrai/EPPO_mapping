@@ -3,3 +3,4 @@ data/Extract_EPPO/*features*
 data/Extract_EPPO/Harmonization_outputs/*
 *.xml
 scripts/output/mapping_metrics/*.png
+mapping_module/*_features/
