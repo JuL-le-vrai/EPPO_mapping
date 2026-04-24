@@ -1,4 +1,5 @@
 import json
+import os
 import xmltodict
 import pandas as pd
 import re
@@ -35,6 +36,8 @@ if __name__ == '__main__':
     with open(args.EPPO_xml,'r') as f:
         xml = xmltodict.parse(f.read())
 
+    ds_list = [i.replace('.json', '') for i in args.names_json]
+
     dict_codes = {}
 
     # Languages considered for the mapping
@@ -66,11 +69,9 @@ if __name__ == '__main__':
                     if n['lang'] in considered_languages_for_mapping:
                         indiv_names.append({'full_name' : n['fullname'], 'lang' : n['lang'], 'active' : n['@isactive']})
 
-            dict_codes[indiv_code] = {'type' : indiv_type, 'parents' : indiv_parents, 'names' : indiv_names, 'mapsto' : { ds : set() for ds in args.ds_list}}
+            dict_codes[indiv_code] = {'type' : indiv_type, 'parents' : indiv_parents, 'names' : indiv_names, 'mapsto' : { ds : set() for ds in ds_list}}
 
-    dic_possible_names = { ds : {} for ds in args.ds_list}
-
-    ds_list = [i.replace('.json', '') for i in args.names_json]
+    dic_possible_names = { ds : {} for ds in ds_list}
 
     # Loading the dictionnary of possible names for the datasets to map. Obtained with Extract_DS_names.py
     for json_file, ds in zip(args.names_json, ds_list):
@@ -114,15 +115,15 @@ if __name__ == '__main__':
 
         dic_names_EPPO = {}
         for code in dict_codes:
-            dic_names_EPPO[code] = [name['full_name'].lower().strip(' _').replace('_',' ').replace('.','') for name in dict_codes[code]['names'] if name['lang'] in considered_languages_for_mapping and name['full_name'] != None and name['active'] == 'true']
+            dic_names_EPPO[code] = [name['full_name'].lower().strip(' _').replace('_',' ').replace('.','').replace('\'','').replace("'", " ") for name in dict_codes[code]['names'] if name['lang'] in considered_languages_for_mapping and name['full_name'] != None and name['active'] == 'true']
 
         # Loading the precomputed tensors for the different names of each EPPO code
         list_tensors = []
         list_EPPO_codes = []
         for EPPO_code in dic_names_EPPO:
             for EPPO_name in dic_names_EPPO[EPPO_code]:
-                EPPO_name = EPPO_name.replace('/','')          
-                list_tensors.append(torch.load(f'../data/Extract_EPPO/GPT_features/EPPO/{EPPO_code}/{EPPO_name}.pt'))
+                EPPO_name = EPPO_name.replace('/','')
+                list_tensors.append(torch.load(f'GPT_features/EPPO/{EPPO_code}/{EPPO_name}.pt'))
                 list_EPPO_codes.append(EPPO_code)
         tensor_EPPO = torch.Tensor(list_tensors)
 
@@ -135,7 +136,7 @@ if __name__ == '__main__':
                 for name in dic_possible_names[ds][subid]:
                     name = name.replace('/','').replace('_',' ')      
                     if name != '':
-                        dic_tensors_DS[ds][subid][name] = torch.Tensor(torch.load(f'../data/Extract_EPPO/GPT_features/{ds}/{subid}/{name}.pt'))
+                        dic_tensors_DS[ds][subid][name] = torch.Tensor(torch.load(f'GPT_features/{ds}/{subid}/{name}.pt'))
 
         for ds in dic_tensors_DS:
             for subid in tqdm(dic_tensors_DS[ds]):
@@ -163,7 +164,7 @@ if __name__ == '__main__':
 
         dic_names_EPPO = {}
         for code in dict_codes:
-            dic_names_EPPO[code] = [name['full_name'].lower().strip(' _').replace('_',' ').replace('.','').replace('\'','') for name in dict_codes[code]['names'] if name['lang'] in considered_languages_for_mapping and name['full_name'] != None and name['active'] == 'true']
+            dic_names_EPPO[code] = [name['full_name'].lower().strip(' _').replace('_',' ').replace('.','').replace('\'','').replace("'", " ") for name in dict_codes[code]['names'] if name['lang'] in considered_languages_for_mapping and name['full_name'] != None and name['active'] == 'true']
 
         # Loading the precomputed tensors for the different names of each EPPO code
         list_tensors = []
@@ -171,7 +172,7 @@ if __name__ == '__main__':
         for EPPO_code in dic_names_EPPO:
             for EPPO_name in dic_names_EPPO[EPPO_code]:
                 EPPO_name = EPPO_name.replace('/','')          
-                list_tensors.append(torch.load(f'../data/Extract_EPPO/PLLaMa-7b-base_features/EPPO/{EPPO_code}/{EPPO_name}.pt')[0].tolist())
+                list_tensors.append(torch.load(f'PLLaMa-7b-base_features/EPPO/{EPPO_code}/{EPPO_name}.pt')[0].tolist())
                 list_EPPO_codes.append(EPPO_code)
         # print(list_tensors[0])
         tensor_EPPO = torch.Tensor(list_tensors)
@@ -185,7 +186,7 @@ if __name__ == '__main__':
                 for name in dic_possible_names[ds][subid]:
                     name = name.replace('/','').replace('_',' ')
                     if name != '':
-                        dic_tensors_DS[ds][subid][name] = torch.Tensor(torch.load(f'../data/Extract_EPPO/PLLaMa-7b-base_features/{ds}/{subid}/{name}.pt'))
+                        dic_tensors_DS[ds][subid][name] = torch.Tensor(torch.load(f'PLLaMa-7b-base_features/{ds}/{subid}/{name}.pt'))
 
         for ds in dic_tensors_DS:
             for subid in tqdm(dic_tensors_DS[ds]):
@@ -212,7 +213,7 @@ if __name__ == '__main__':
 
         dic_names_EPPO = {}
         for code in dict_codes:
-            dic_names_EPPO[code] = [name['full_name'].lower().strip(' _').replace('_',' ').replace('.','').replace('\'','') for name in dict_codes[code]['names'] if name['lang'] in considered_languages_for_mapping and name['full_name'] != None and name['active'] == 'true']
+            dic_names_EPPO[code] = [name['full_name'].lower().strip(' _').replace('_',' ').replace('.','').replace('\'','').replace("'", " ") for name in dict_codes[code]['names'] if name['lang'] in considered_languages_for_mapping and name['full_name'] != None and name['active'] == 'true']
 
         # Loading the precomputed tensors for the different names of each EPPO code
         list_tensors = []
@@ -220,7 +221,7 @@ if __name__ == '__main__':
         for EPPO_code in dic_names_EPPO:
             for EPPO_name in dic_names_EPPO[EPPO_code]:
                 EPPO_name = EPPO_name.replace('/','')          
-                list_tensors.append(torch.load(f'../data/Extract_EPPO/Meta-Llama-3.1-8B_features/EPPO/{EPPO_code}/{EPPO_name}.pt')[0].tolist())
+                list_tensors.append(torch.load(f'Meta-Llama-3.1-8B_features/EPPO/{EPPO_code}/{EPPO_name}.pt')[0].tolist())
                 list_EPPO_codes.append(EPPO_code)
         # print(list_tensors[0])
         tensor_EPPO = torch.Tensor(list_tensors)
@@ -234,7 +235,7 @@ if __name__ == '__main__':
                 for name in dic_possible_names[ds][subid]:
                     name = name.replace('/','').replace('_',' ')
                     if name != '':
-                        dic_tensors_DS[ds][subid][name] = torch.Tensor(torch.load(f'../data/Extract_EPPO/Meta-Llama-3.1-8B_features/{ds}/{subid}/{name}.pt'))
+                        dic_tensors_DS[ds][subid][name] = torch.Tensor(torch.load(f'Meta-Llama-3.1-8B_features/{ds}/{subid}/{name}.pt'))
 
         for ds in dic_tensors_DS:
             for subid in tqdm(dic_tensors_DS[ds]):
@@ -258,7 +259,10 @@ if __name__ == '__main__':
         for db in dict_codes[code]['mapsto']:
             dict_codes[code]['mapsto'][db] = list(dict_codes[code]['mapsto'][db])
 
-    with open(f'../data/Extract_EPPO/Harmonization_outputs/CodesDict_{args.method}_{tolerance}_V2.json', 'w') as f:
+    if 'outputs' not in os.listdir():
+        os.mkdir('outputs')
+
+    with open(f'outputs/CodesDict_{args.method}_{tolerance}_V2.json', 'w') as f:
         json.dump(dict_codes, f, indent = 2)
 
     if args.drctn == 'EPPOtoDS':
@@ -296,7 +300,7 @@ if __name__ == '__main__':
                     final_mapping[ds][subid] = []
 
 
-    with open(f'../data/Extract_EPPO/Harmonization_outputs/Mapping_{args.method}_{tolerance}_{args.drctn}_V2.json', 'w') as f:
+    with open(f'outputs/Mapping_{args.method}_{tolerance}_{args.drctn}_V2.json', 'w') as f:
         json.dump(final_mapping, f, indent=2)
 
 
