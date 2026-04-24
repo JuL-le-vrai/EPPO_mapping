@@ -16,5 +16,22 @@ Key features:
 - Enrich records with taxonomic metadata (taxon rank, family, synonyms).
 - Export results to JSON format.
 
+# Usage
 
+To produce a mapping from a list of names you will need :
 
+- A .json file of the form : `{unique_instance_id (type = str) : [name1 (type = str), name2 (type = str), ...], ...}` containing the diffferent names of the instances you want to map. See the example in `./mapping_module/IPM_names.json`. (If you only have a list of plain text names, build a json from it with lists of one unique element per entry. An integration of this functionnality directly in the code is WIP.)
+- The fullcodes.xml file, wich is an export of the EPPO database. The version used for the paper can be found in `./Reproduce_results/data/Extract_EPPO/fullcodes.xml.zip`. Alternatively you can download the latest version at https://data.eppo.int/docs/ (you will need an account)
+- An openAI API key for the GPT-based mapping method. Your API account must be provisioned. Notice that the generation of a mapping for 10 000 names is less 1$, most of which coming from the extraction of features for the 50k EPPO codes, that can be reused after generation. 
+- A huggingface API key for the other LLM-based methods.
+
+## Basic examples
+
+To extract a Levenshtein based mapping from your names_file.json run :
+- `python ./mapping_module/Extract_mapping_from_names.py --tolerance 0.95 --method Levenshtein --names-json $PATH_TO_YOUR_JSON_NAMES_FILE$ --EPPO-xml $PATH_TO_EPPO_XML_EXPORT$` tolerance parameter can take any value from 0 to 1, 1 being for exact correspondance.
+
+To extract a GPT based mapping from your names_file.json run : 
+`python /mapping_module/LLM_FeatureExtraction.py --names-json $PATH_TO_YOUR_JSON_NAMES_FILE$ --GPT-api-key-file $PATH_TO_TXT_FILE_CONTAINNING_API_KEY$ --EPPO-xml $PATH_TO_EPPO_XML_EXPORT$ --model GPT`. This will extract the representative features of the EPPO names and your specified names. Then run :
+`python ./mapping_module/Extract_mapping_from_names.py --tolerance $YOUR_SPECIFIED_TOLERANCE$ --method GPT-embed --names-json $PATH_TO_YOUR_JSON_NAMES_FILE$ --EPPO-xml $PATH_TO_EPPO_XML_EXPORT$`
+
+Resulting mapping can be found in json format in the `./mapping_module/outputs/` directory in a file named `Mapping_$METHOD$_$TOLERANCE$_DStoEPPO_V2.json`
