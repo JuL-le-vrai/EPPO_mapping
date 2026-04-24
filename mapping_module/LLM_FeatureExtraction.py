@@ -87,7 +87,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     with open(args.GPT_api_key_file, 'r') as f:
-        gpt_api_key = f.read()
+        gpt_api_key = f.read().strip()
 
 
     ds_list = [i.replace('.json', '') for i in args.names_json]
@@ -96,7 +96,6 @@ if __name__ == '__main__':
     for json_file, ds in zip(args.names_json, ds_list):
         with open(json_file,'r') as f:
             dic_possible_names[ds] = json.load(f)
-
 
     with open(args.EPPO_xml,'r') as f:
         xml = xmltodict.parse(f.read())
@@ -136,7 +135,7 @@ if __name__ == '__main__':
     dic_possible_names['EPPO'] = {}
 
     for code in dict_codes:
-        dic_possible_names['EPPO'][code] = [name['full_name'].lower().strip(' _').replace('_',' ').replace('.','').replace('\'','') for name in dict_codes[code]['names'] if name['lang'] in considered_lang and name['full_name'] != None and name['active'] == 'true']
+        dic_possible_names['EPPO'][code] = [name['full_name'].lower().strip(' _').replace('_',' ').replace('.','').replace('\'','').replace("'", " ") for name in dict_codes[code]['names'] if name['lang'] in considered_lang and name['full_name'] != None and name['active'] == 'true']
 
     if args.model == 'GPT':
 
@@ -160,7 +159,7 @@ if __name__ == '__main__':
                         sentence = produce_sentence(name, prompt_type = args.prompt_name)
                         embdg = extract_features('GPT', sentence, prompt_type = args.prompt_name, gpt_api_key = gpt_api_key)
                         name = name.replace('/','')                
-                        torch.save(embdg,f'GPT_features{name_exp}/{ds}/{subid}/{name}.pt')
+                        torch.save(embdg,f"GPT_features{name_exp}/{ds}/{subid}/{name}.pt")
     else:
 
         raw_inputs = []
