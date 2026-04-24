@@ -28,7 +28,7 @@ To produce a mapping from a list of names you will need :
 ## Basic examples
 
 To extract a Levenshtein based mapping from your names_file.json run :
-- `python ./mapping_module/Extract_mapping_from_names.py --tolerance 0.95 --method Levenshtein --names-json $PATH_TO_YOUR_JSON_NAMES_FILE$ --EPPO-xml $PATH_TO_EPPO_XML_EXPORT$` tolerance parameter can take any value from 0 to 1, 1 being for exact correspondance.
+`python ./mapping_module/Extract_mapping_from_names.py --tolerance 0.95 --method Levenshtein --names-json $PATH_TO_YOUR_JSON_NAMES_FILE$ --EPPO-xml $PATH_TO_EPPO_XML_EXPORT$` tolerance parameter can take any value from 0 to 1, 1 being for exact correspondance.
 
 To extract a GPT based mapping from your names_file.json run : 
 `python /mapping_module/LLM_FeatureExtraction.py --names-json $PATH_TO_YOUR_JSON_NAMES_FILE$ --GPT-api-key-file $PATH_TO_TXT_FILE_CONTAINNING_API_KEY$ --EPPO-xml $PATH_TO_EPPO_XML_EXPORT$ --model GPT`. This will extract the representative features of the EPPO names and your specified names. Then run :
