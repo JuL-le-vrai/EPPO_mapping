@@ -27,11 +27,22 @@ To produce a mapping from a list of names you will need :
 
 ## Basic examples
 
+First You will need to convert the .xml of EPPO codes to a more manageable .json file. For this, run : 
+`python xml_to_json.py --EPPO-xml $PATH_TO_EPPO_XML_EXPORT$`
+This command will produce a json file named `EPPO_codes.json` which is a json counterpart of the xml export.
+
 To extract a Levenshtein based mapping from your names_file.json run :
-`python ./mapping_module/Extract_mapping_from_names.py --tolerance 0.95 --method Levenshtein --names-json $PATH_TO_YOUR_JSON_NAMES_FILE$ --EPPO-xml $PATH_TO_EPPO_XML_EXPORT$` tolerance parameter can take any value from 0 to 1, 1 being for exact correspondance.
+`python ./mapping_module/Extract_mapping_from_names.py --tolerance 0.95 --method Levenshtein --names-json $PATH_TO_YOUR_JSON_NAMES_FILE$ --EPPO-json $PATH_TO_EPPO_CODES.JSON$` tolerance parameter can take any value from 0 to 1, 1 being for exact correspondance. Note that if you have different datasets you want to map at once, you can specify a list of json names files paths, comma separated. 
 
 To extract a GPT based mapping from your names_file.json run : 
-`python /mapping_module/LLM_FeatureExtraction.py --names-json $PATH_TO_YOUR_JSON_NAMES_FILE$ --GPT-api-key-file $PATH_TO_TXT_FILE_CONTAINNING_API_KEY$ --EPPO-xml $PATH_TO_EPPO_XML_EXPORT$ --model GPT`. This will extract the representative features of the EPPO names and your specified names. Then run :
-`python ./mapping_module/Extract_mapping_from_names.py --tolerance $YOUR_SPECIFIED_TOLERANCE$ --method GPT-embed --names-json $PATH_TO_YOUR_JSON_NAMES_FILE$ --EPPO-xml $PATH_TO_EPPO_XML_EXPORT$`
+`python /mapping_module/LLM_FeatureExtraction.py --names-json $PATH_TO_YOUR_JSON_NAMES_FILE$ --GPT-api-key-file $PATH_TO_TXT_FILE_CONTAINNING_API_KEY$ --EPPO-xml $PATH_TO_EPPO_XML_EXPORT$ --model GPT`. This will extract the representative features of the EPPO names and your specified names. Similarly, you can specify a list of json names files paths, comma separated.
+Then run :
+`python ./mapping_module/Extract_mapping_from_names.py --tolerance $YOUR_SPECIFIED_TOLERANCE$ --method GPT-embed --names-json $PATH_TO_YOUR_JSON_NAMES_FILE$ --EPPO-json $PATH_TO_EPPO_CODES.JSON$`
 
 Resulting mapping can be found in json format in the `./mapping_module/outputs/` directory in a file named `Mapping_$METHOD$_$TOLERANCE$_DStoEPPO_V2.json`
+
+## Output description 
+
+The `Extract_mapping_from_names.py` script will produce two distinct output files : 
+- A dictionnary of EPPO codes, wich associates each entry (EPPO code) to : its type in the EPPO terminology, its parent in the EPPO hierarchy, its known names in the EPPO database, and a dictionnary containnnig, for each specified json file, a list of the json entries that map to this code with a similarity above the specified tolerance threshold.
+- A Mapping file, in the form of a json file, which, for each specified names file, associates to each entry the best mapping EPPO code, which similarity is above the specified tolerance threshold.
