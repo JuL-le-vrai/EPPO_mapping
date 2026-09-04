@@ -35,7 +35,7 @@ To extract a Levenshtein based mapping from your names_file.json run :
 `python ./mapping_module/Extract_mapping_from_names.py --tolerance 0.95 --method Levenshtein --names-json $PATH_TO_YOUR_JSON_NAMES_FILE$ --EPPO-json $PATH_TO_EPPO_CODES.JSON$` tolerance parameter can take any value from 0 to 1, 1 being for exact correspondance. Note that if you have different datasets you want to map at once, you can specify a list of json names files paths, comma separated. 
 
 To extract a GPT based mapping from your names_file.json run : 
-`python /mapping_module/LLM_FeatureExtraction.py --names-json $PATH_TO_YOUR_JSON_NAMES_FILE$ --GPT-api-key-file $PATH_TO_TXT_FILE_CONTAINNING_API_KEY$ --EPPO-xml $PATH_TO_EPPO_XML_EXPORT$ --model GPT`. This will extract the representative features of the EPPO names and your specified names. Similarly, you can specify a list of json names files paths, comma separated.
+`python /mapping_module/LLM_FeatureExtraction.py --names-json $PATH_TO_YOUR_JSON_NAMES_FILE$ --GPT-api-key-file $PATH_TO_TXT_FILE_CONTAINNING_API_KEY$ --EPPO-json $PATH_TO_EPPO_CODES.JSON$ --model GPT`. This will extract the representative features of the EPPO names and your specified names. Similarly, you can specify a list of json names files paths, comma separated.
 Then run :
 `python ./mapping_module/Extract_mapping_from_names.py --tolerance $YOUR_SPECIFIED_TOLERANCE$ --method GPT-embed --names-json $PATH_TO_YOUR_JSON_NAMES_FILE$ --EPPO-json $PATH_TO_EPPO_CODES.JSON$`
 
